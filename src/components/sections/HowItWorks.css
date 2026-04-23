@@ -1,0 +1,32 @@
+.how {
+  padding: 120px 0;
+}
+.steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.step__arrow {
+  color: var(--step-arrow);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+.step__arrow svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--step-arrow);
+}
+
+@media (max-width: 768px) {
+  .steps {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .step__arrow {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+}

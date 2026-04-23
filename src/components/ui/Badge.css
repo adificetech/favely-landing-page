@@ -1,0 +1,41 @@
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--hero-badge-bg);
+  border: 1px solid var(--hero-badge-border);
+  color: var(--clr-purple);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 28px;
+  animation: fadeInUp 0.6s ease both;
+}
+.hero__badge::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--hero-badge-dot);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.section-tag {
+  display: inline-block;
+  background: var(--section-tag-bg);
+  border: 1px solid var(--section-tag-border);
+  color: var(--section-tag-fg);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+.section-tag--light {
+  background: var(--section-tag-light-bg);
+  border-color: var(--section-tag-light-border);
+  color: var(--section-tag-light-fg);
+}

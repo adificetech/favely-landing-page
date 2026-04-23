@@ -1,0 +1,333 @@
+/* Hero + phone mock (uses theme via CSS variables) */
+.gradient-text {
+  background: var(--grad-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--hero-section-bg);
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 120px 60px 80px;
+}
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__headline {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+  animation: fadeInUp 0.6s 0.1s ease both;
+}
+.hero__sub {
+  font-size: 1.15rem;
+  color: var(--clr-muted);
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.6s 0.2s ease both;
+}
+.hero__cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+  animation: fadeInUp 0.6s 0.3s ease both;
+}
+.hero__trust {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  animation: fadeInUp 0.6s 0.4s ease both;
+}
+.trust-item {
+  display: flex;
+  flex-direction: column;
+}
+.trust-item strong {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.trust-item span {
+  font-size: 0.8rem;
+  color: var(--clr-muted);
+}
+.trust-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--clr-border);
+}
+
+.hero__mockup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  animation: fadeInRight 0.8s 0.2s ease both;
+}
+
+.phone {
+  position: relative;
+  width: 280px;
+  height: 580px;
+  background: var(--phone-chassis);
+  border-radius: 40px;
+  border: 2px solid var(--phone-chassis-border);
+  box-shadow: var(--phone-shadow-outer);
+  overflow: hidden;
+  animation: phoneFloat 6s ease-in-out infinite;
+}
+
+img.phone {
+  background: none;
+  border: none;
+  box-shadow: none;
+  object-fit: cover;
+}
+.phone__notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 28px;
+  background: var(--phone-notch);
+  border-radius: 0 0 20px 20px;
+  z-index: 10;
+}
+.phone__button {
+  position: absolute;
+  background: var(--phone-button);
+  border-radius: 3px;
+}
+.phone__button--vol {
+  left: -3px;
+  top: 120px;
+  width: 3px;
+  height: 60px;
+}
+.phone__button--power {
+  right: -3px;
+  top: 140px;
+  width: 3px;
+  height: 40px;
+}
+.phone__screen {
+  width: 100%;
+  height: 100%;
+  background: var(--phone-screen-bg);
+  padding: 36px 12px 12px;
+  overflow: hidden;
+}
+
+.app-ui {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.app-ui__topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+}
+.app-ui__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--app-ui-text);
+}
+.app-ui__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--grad-primary);
+}
+.app-ui__search {
+  background: var(--app-ui-surface-2);
+  border: 1px solid var(--app-ui-line-2);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  color: var(--clr-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.app-ui__search-icon {
+  display: flex;
+  flex-shrink: 0;
+  color: var(--clr-muted);
+}
+.app-ui__search-icon svg {
+  width: 14px;
+  height: 14px;
+}
+.app-ui__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--clr-muted);
+  padding: 0 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.app-ui__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.spa-card {
+  background: var(--app-ui-surface);
+  border: 1px solid var(--app-ui-line);
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.spa-card__img {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+.spa-card__img--1 {
+  background: var(--grad-spa-1);
+}
+.spa-card__img--2 {
+  background: var(--grad-spa-2);
+}
+.spa-card__name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--app-ui-text);
+}
+.spa-card__stars {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  font-size: 0.65rem;
+  color: var(--clr-star);
+}
+.spa-card__stars .spa-card__star {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+}
+.spa-card__stars .spa-card__star--empty {
+  color: var(--clr-muted);
+  opacity: 0.4;
+}
+.spa-card__stars .spa-card__rating-num {
+  color: var(--clr-muted);
+  margin-left: 4px;
+}
+.spa-card__tag {
+  font-size: 0.6rem;
+  color: var(--clr-muted);
+  margin-top: 2px;
+}
+
+.appt-card {
+  background: var(--grad-appt);
+  border: 1px solid var(--appt-line);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.appt-card__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--clr-purple);
+  flex-shrink: 0;
+}
+.appt-card__name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--app-ui-text);
+}
+.appt-card__time {
+  font-size: 0.65rem;
+  color: var(--clr-muted);
+}
+.appt-card__badge {
+  margin-left: auto;
+  background: var(--appt-badge-bg);
+  color: var(--clr-success-fg);
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 100px;
+  border: 1px solid var(--appt-badge-border);
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    padding: 140px 24px 80px;
+    text-align: center;
+  }
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero__sub {
+    text-align: center;
+  }
+  .hero__trust {
+    justify-content: center;
+  }
+  .hero__mockup {
+    order: -1;
+  }
+}
+@media (max-width: 768px) {
+  .phone {
+    width: 240px;
+    height: 500px;
+  }
+}
+@media (max-width: 480px) {
+  .hero__cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero__trust {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .trust-divider {
+    display: none;
+  }
+}

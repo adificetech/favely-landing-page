@@ -1,0 +1,113 @@
+/* Parent .features__grid: 6 columns — wide=4+2; pair=3+3; default=2 (one third) */
+.feature-card {
+  background: var(--clr-surface-elevated);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-card);
+  grid-column: span 2;
+  transition:
+    border-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.feature-card:hover {
+  border-color: var(--hover-border-purple);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elevated);
+}
+.feature-card--wide {
+  grid-column: span 4;
+}
+.feature-card--pair {
+  grid-column: span 3;
+}
+.feature-card--full {
+  grid-column: span 6;
+}
+
+.feature-card--dark {
+  background: var(--grad-feature-dark);
+  border-color: var(--feature-dark-border);
+}
+.feature-card--dark h3 {
+  color: var(--clr-text);
+}
+.feature-card--dark p {
+  color: var(--clr-muted);
+}
+.feature-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 16px 0 10px;
+}
+.feature-card p {
+  color: var(--clr-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+.feature-card__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.feature-card__icon svg {
+  width: 1.625rem;
+  height: 1.625rem;
+  flex-shrink: 0;
+}
+.feature-card__icon--purple {
+  background: var(--feature-icon-purple-bg);
+}
+.feature-card__icon--pink {
+  background: var(--feature-icon-pink-bg);
+}
+.feature-card__icon--rose {
+  background: var(--feature-icon-rose-bg);
+}
+.feature-card__icon--violet {
+  background: var(--feature-icon-violet-bg);
+}
+.feature-card__icon--light {
+  background: var(--feature-icon-purple-bg);
+}
+.feature-card__pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.feature-card__pills span {
+  background: var(--feature-pill-bg);
+  border: 1px solid var(--feature-pill-border);
+  color: var(--feature-pill-fg);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+.feature-card--dark .feature-card__pills span {
+  background: var(--feature-pill-bg);
+  border-color: var(--feature-pill-border);
+  color: var(--feature-pill-fg);
+}
+
+@media (max-width: 1024px) {
+  .features__grid .feature-card,
+  .features__grid .feature-card--wide,
+  .features__grid .feature-card--pair {
+    grid-column: span 1;
+  }
+  .features__grid .feature-card--wide {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 768px) {
+  .features__grid .feature-card--wide {
+    grid-column: span 1;
+  }
+}
