@@ -9,7 +9,7 @@ import {
   GooglePlayStoreBadgeIcon,
   AppleAppStoreBadgeIcon,
 } from '../icons/StoreBadgesIcon.jsx';
-import phoneImage from '../../public/favely.png';
+import phoneImage from '../../../public/favely.png';
 
 const trustItems = [
   { label: 'Search', sub: 'Any spa, anywhere' },
